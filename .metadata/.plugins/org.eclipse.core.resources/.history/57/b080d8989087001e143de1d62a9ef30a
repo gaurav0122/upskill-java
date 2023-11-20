@@ -1,0 +1,26 @@
+package com.upskill.intermoops;
+
+public class Employee {
+	
+	public int calculateTotalSalary(int days) {
+		return days;
+	}
+}
+
+class Labour extends EmployeeSalary{
+	 int overtime=500;
+	 
+	 @Override
+	 public int calculateTotalSalary(int days) {
+			return (days *200) + overtime;
+	}
+}
+
+class Manager extends EmployeeSalary{
+	int incentive=1000;
+	
+	@Override
+	public int calculateTotalSalary(int days) {
+		return (days*100)+incentive;
+	}
+}

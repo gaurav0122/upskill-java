@@ -1,0 +1,41 @@
+package com.upskill;
+
+import java.util.Scanner;
+
+public class LoginApp {
+	public static void main(String[] args) {
+		String username = "user";
+		String password = "u123";
+		int attempt=3;
+		Scanner sc = new Scanner(System.in);
+		boolean check= true;
+		
+		try {
+			while(attempt-->0) {
+				System.out.println("Please Enter the username");
+				String uName = sc.next();
+				System.out.println("Please Enter the password");
+				String pass = sc.next();
+				
+				if(uName.equals(username) && pass.equals(password)) {
+					System.out.println("Welcome !!");
+					check=false;
+					break;
+				}else if(attempt!=1){
+					System.out.println("Please Enter the valid Details\n\n");
+				}
+			}
+			
+			if(check) {
+				System.out.println("\nPlease contact your admin !!");
+			}
+		}catch (Exception e) {
+			System.out.println("Error occured.. Please rerun the program");
+		}finally {
+			sc.close();
+		}
+		
+		
+		
+	}
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\gganpatl\Darden\Upskill\java-20-11-23\.metadata\.plugins\org.eclipse.jdt.core
+67967795.index
+2197650153.index
+1865797976.index

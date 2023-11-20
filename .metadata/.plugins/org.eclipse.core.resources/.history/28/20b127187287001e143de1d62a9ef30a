@@ -1,0 +1,40 @@
+package com.upskill;
+
+import java.util.Scanner;
+
+public class SimpleCompoundInterest {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int principle;
+		float intrestRate;
+		int timeInMonths;
+		
+		
+		try {
+			System.out.println("Enter the principle amount");
+			principle = sc.nextInt();
+			
+			System.out.println("Enter the Interest rate");
+			intrestRate = sc.nextFloat();
+			
+			System.out.println("Enter the Time in the months");
+			timeInMonths = sc.nextInt();
+			
+			System.out.println("---- Simple Intrest -----");
+			float simpleIntrest = (principle * intrestRate * (timeInMonths/12))/100;
+			System.out.println(simpleIntrest);
+			
+			System.out.println("\n---- Compound Intrest -----");
+			float compoundIntrest = (principle * intrestRate * (timeInMonths/12))/100;
+			System.out.println(compoundIntrest);
+			
+			
+			
+		}catch(Exception e) {
+			System.out.println("Error occured"+e.getMessage());
+		}
+		
+		sc.close();
+	}
+}
