@@ -1,0 +1,16 @@
+package com.upskill.string;
+
+public class StringAssignments {
+	
+	public static void main(String[] args) {
+		
+		String str = "hello world";
+		
+		System.out.println("Length of the string is "+str.length());
+		
+		String string1 = "Hello, ";
+		String string2 = "How are you?";
+		
+		System.out.println(string1+string2);
+	}
+}

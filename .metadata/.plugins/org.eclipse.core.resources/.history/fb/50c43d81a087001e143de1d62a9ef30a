@@ -1,0 +1,11 @@
+package com.upskill.string;
+
+public class StringAssignments {
+	
+	public static void main(String[] args) {
+		
+		String str = "hello world";
+		
+		System.out.println();
+	}
+}

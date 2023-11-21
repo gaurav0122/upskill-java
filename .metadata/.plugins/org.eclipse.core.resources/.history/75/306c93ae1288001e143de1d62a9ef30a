@@ -1,0 +1,30 @@
+package com.upskill.collection;
+
+import java.util.HashSet;
+
+public class TenUniqueElements {
+	
+	public static void main(String[] args) {
+		usinghashset();
+	}
+	
+	private static void usinghashset() {
+		
+		HashSet<String> hashset = new HashSet<>();
+		hashset.add("a");
+		hashset.add("b");
+		hashset.add("c");
+		hashset.add("a");
+		hashset.add("b");
+		hashset.add("d");
+		hashset.add("e");
+		hashset.add("f");
+		hashset.add("i");
+		hashset.add("j");
+		hashset.add("e");
+		hashset.add("r");
+		hashset.add("z");
+		
+		System.out.println(hashset.toString());
+	}
+}

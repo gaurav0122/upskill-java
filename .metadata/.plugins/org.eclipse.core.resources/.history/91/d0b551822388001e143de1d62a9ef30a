@@ -1,0 +1,156 @@
+package com.upskill.collection;
+
+import java.util.Comparator;
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class TreeSetExample {
+	
+	public static void main(String[] args) {
+		Employee emp1 = new Employee(1l, "gaurav", "MS", 12000D);
+		Employee emp2 = new Employee(2l, "prasad", "UI", 14000D);
+		Employee emp3 = new Employee(3l, "akash", "MS", 11000D);
+		Employee emp4 = new Employee(4l, "nihal", "MS", 62000D);
+		Employee emp5 = new Employee(5l, "suyash", "UI", 22000D);
+		Employee emp6 = new Employee(6l, "paremsh", "MS", 12400D);
+		Employee emp7 = new Employee(7l, "sidd", "UI", 17000D);
+		Employee emp8 = new Employee(8l, "tushar", "MS", 22000D);
+		Employee emp9 = new Employee(9l, "anil", "MS", 32000D);
+		Employee emp10 = new Employee(10l, "mrunal", "UI", 25000D);
+		
+		TreeSet<Employee> emp ;
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			System.out.println("please Enter :\n1.id \n2.name \n3.department \4.salary");
+			int c = sc.nextInt();
+			switch(c) {
+				case 1:
+					emp = new TreeSet<>(new IdComparator());
+					emp.add(emp1);
+					emp.add(emp2);
+					emp.add(emp3);
+					emp.add(emp4);
+					emp.add(emp5);
+					emp.add(emp6);
+					emp.add(emp7);
+					emp.add(emp8);
+					emp.add(emp9);
+					emp.add(emp10);
+					for(Employee e :emp) {
+						System.out.println(e.toString());
+					}
+					break;
+				case 2:
+					emp = new TreeSet<>(new IdComparator());
+					emp.add(emp1);
+					emp.add(emp2);
+					emp.add(emp3);
+					emp.add(emp4);
+					emp.add(emp5);
+					emp.add(emp6);
+					emp.add(emp7);
+					emp.add(emp8);
+					emp.add(emp9);
+					emp.add(emp10);
+					for(Employee e :emp) {
+						System.out.println(e.toString());
+					}
+					break;
+				case 3:
+					emp = new TreeSet<>(new IdComparator());
+					emp.add(emp1);
+					emp.add(emp2);
+					emp.add(emp3);
+					emp.add(emp4);
+					emp.add(emp5);
+					emp.add(emp6);
+					emp.add(emp7);
+					emp.add(emp8);
+					emp.add(emp9);
+					emp.add(emp10);
+					for(Employee e :emp) {
+						System.out.println(e.toString());
+					}
+					break;
+				case 4:
+					emp = new TreeSet<>(new IdComparator());
+					emp.add(emp1);
+					emp.add(emp2);
+					emp.add(emp3);
+					emp.add(emp4);
+					emp.add(emp5);
+					emp.add(emp6);
+					emp.add(emp7);
+					emp.add(emp8);
+					emp.add(emp9);
+					emp.add(emp10);
+					for(Employee e :emp) {
+						System.out.println(e.toString());
+					}
+					break;
+				default:System.out.println("Invalid choice");
+			}
+			if(c>4||c<1) {
+				break;
+			}
+		}
+		sc.close();
+	}
+}
+
+class IdComparator implements Comparator<Employee>{
+
+	@Override
+	public int compare(Employee e1, Employee e2) {
+		return (int) (e1.id-e2.id);
+	}
+	
+}
+
+class NameComparator implements Comparator<Employee>{
+
+	@Override
+	public int compare(Employee e1, Employee e2) {
+		return e1.name.compareTo(e2.name);
+	}
+	
+}
+
+class DepartmentComparator implements Comparator<Employee>{
+
+	@Override
+	public int compare(Employee e1, Employee e2) {
+		return (int) (e1.id-e2.id);
+	}
+	
+}
+
+class SalaryComparator implements Comparator<Employee>{
+
+	@Override
+	public int compare(Employee e1, Employee e2) {
+		return (int) (e1.salary-e2.salary);
+	}
+	
+}
+class Employee{
+	Long id;
+	String name;
+	String Department;
+	double salary;
+	public Employee(Long id, String name, String department, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		Department = department;
+		this.salary = salary;
+	}
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", Department=" + Department + ", salary=" + salary + "]";
+	}
+}

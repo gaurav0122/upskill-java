@@ -1,0 +1,14 @@
+package com.upskill.string;
+
+public class StringBufferAssignments {
+	
+	public static void main(String[] args) {
+		String s1 = "StringBuffer ";
+		String s2 = "is a peer class of String ";
+		String s3 = "That provides much of ";
+		String s4 = "the functionality of Strings";
+		
+		StringBuffer sb = new StringBuffer()
+		System.out.println();
+	}
+}

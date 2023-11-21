@@ -1,0 +1,69 @@
+package com.upskill.collection;
+
+import java.util.Comparator;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class TreeMapExample {
+	
+	public static void main(String[] args) {
+		Contact contact1 = new Contact(1234,"gaurav","gau@gma.co",Gender.MALE);
+		Contact contact2 = new Contact(6543,"nihal","nih@gma.co",Gender.MALE);
+		Contact contact3 = new Contact(4532,"suyash","suy@gma.co",Gender.MALE);
+		Contact contact4 = new Contact(1001,"akash","aka@gma.co",Gender.MALE);
+		Contact contact5 = new Contact(3984,"tushar","tus@gma.co",Gender.MALE);
+		
+		TreeMap<Long, Contact> treemap = new TreeMap<>();
+		treemap.put(contact1.phoneNumber, contact1);
+		treemap.put(contact2.phoneNumber, contact2);
+		treemap.put(contact3.phoneNumber, contact3);
+		treemap.put(contact4.phoneNumber, contact4);
+		treemap.put(contact5.phoneNumber, contact5);
+		
+		for(Map.Entry<Long, Contact> entry : treemap.entrySet()) {
+			System.out.println("key : "+entry.getKey() +", Value : "+entry.getValue().toString());
+		}
+	}
+}
+
+class TreeMapComparator implements Comparator<Long>{
+
+	@Override
+	public int compare(Long l1, Long l2) {
+		return (int) (l1-l2);
+	}
+	
+}
+
+class Contact{
+	long phoneNumber;
+	
+	String name;
+	
+	String email;
+	
+	Gender gender;
+
+	public Contact(long phoneNumber, String name, String email, Gender gender) {
+		this.phoneNumber = phoneNumber;
+		this.name = name;
+		this.email = email;
+		this.gender = gender;
+	}
+
+	public Contact() {
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Contact [phoneNumber=" + phoneNumber + ", name=" + name + ", email=" + email + ", gender=" + gender
+				+ "]";
+	}
+	
+	
+}
+
+enum Gender{
+	MALE,FEMALE
+}

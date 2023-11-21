@@ -1,0 +1,74 @@
+package com.upskill.exception;
+
+import java.util.Scanner;
+
+public class ArithmaticCustomException {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			System.out.println("Enter the two numbers");
+			int a = sc.nextInt();
+			int b= sc.nextInt();
+			if(b==0) {
+				throw new UnsupportedOperationException("/ by zero not supported");
+			}
+			System.out.println("Division is "+ a/b);
+			
+		}catch (UnsupportedOperationException e) {
+			System.out.println(e.getMessage() + " Exception occured");
+		}
+		
+		
+		
+		try {
+			try {
+				System.out.println("Enter the two numbers");
+				int a = sc.nextInt();
+				int b= sc.nextInt();
+				System.out.println("Division is "+ a/b);
+				
+			}catch (ArithmeticException e) {
+				throw new UnsupportedOperationException(e.getLocalizedMessage());
+				
+			}
+		}catch (UnsupportedOperationException e) {
+			System.out.println(e.getLocalizedMessage());
+		}finally {
+			sc.close();
+		}
+		
+		
+	}
+}
+
+
+
+//class UnsupportedOperationException extends ArithmeticException{
+//	
+//	/**
+//	 * 
+//	 */
+//	private static final long serialVersionUID = 1L;
+//	
+//	
+//	String message;
+//	UnsupportedOperationException(String messgae){
+//		super(messgae);
+//		this.message = messgae;
+//	}
+//	
+//}
+
+
+
+
+
+
+
+
+
+
+
