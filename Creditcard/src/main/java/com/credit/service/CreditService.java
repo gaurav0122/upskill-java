@@ -1,5 +1,7 @@
 package com.credit.service;
 
-public class CreditService {
+public interface CreditService {
+
+	String validateCreditcard(String cardnumber);
 
 }
