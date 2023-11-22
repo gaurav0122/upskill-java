@@ -11,26 +11,26 @@ public class CalculatorController {
 
 	
 	@GetMapping("/add")
-	public int additionTwoNumbers(@RequestParam("no1") int no1, @RequestParam("no1") int no2) {
+	public int additionTwoNumbers(@RequestParam("no1") int no1, @RequestParam("no2") int no2) {
 		return no1+no2;
 	}
 	
-	@GetMapping("/add")
-	public int subtractionTwoNumbers(@RequestParam("no1") int no1, @RequestParam("no1") int no2) {
-		return no1+no2;
+	@GetMapping("/sub")
+	public int subtractionTwoNumbers(@RequestParam("no1") int no1, @RequestParam("no2") int no2) {
+		return no1-no2;
 	}
 	
-	@GetMapping("/add")
-	public int MultiplicationTwoNumbers(@RequestParam("no1") int no1, @RequestParam("no1") int no2) {
-		return no1+no2;
+	@GetMapping("/mul")
+	public int MultiplicationTwoNumbers(@RequestParam("no1") int no1, @RequestParam("no2") int no2) {
+		return no1*no2;
 	}
 	
-	@GetMapping("/add")
-	public int DivisionTwoNumbers(@RequestParam("no1") int no1, @RequestParam("no1") int no2) {
-		return no1+no2;
+	@GetMapping("/div")
+	public double DivisionTwoNumbers(@RequestParam("no1") int no1, @RequestParam("no2") int no2) {
+		return no1/no2;
 	}
 	
-	@GetMapping("/add")
+	@GetMapping("/sqrt")
 	public double SquateRootOfANumber(@RequestParam("no") int no1) {
 		return Math.sqrt(no1);
 	}
